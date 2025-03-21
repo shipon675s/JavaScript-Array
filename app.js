@@ -1,74 +1,74 @@
-//! JavaScript Arrays:
-const language2 = new Array('HTML', 'CSS', 'JavaScript', 'PHP', true, 50);
+// JavaScript Array
+const lan = ['Html', 'Css', 'Js', 'Php', true, 50];
 
-const language1 = ['HTML', 'CSS', 'JavaScript', 'PHP', true, 50];  //! Recommended
+lan[4] = 'Tailwind CSS';
+lan[5] = 'vue.js';
+lan[6] = 'react.js';
 
-//! Changes
-language1[4] = 'Tailwind CSS';
-language1[5] = 'React.js';
+// Delete / remove last item
+lan.pop();
 
-//! Delete or Remove last item
-language1.pop();
+// Add last item
+lan.push('Laravel');
 
-//! Add last item
-language1.push('Angular.js');
+// Add first item
+lan.unshift('Basic Computing');
 
-//! Add first item
-language1.unshift('Basic Computing');
+// Delete / remove first item
+lan.shift();
 
-//! Delete first item
-language1.shift();
+console.log(lan);
 
-//! Splice (Add value)
-language1.splice(2,0, 'info', 'info 2');
+console.log(lan[0]);                    // First Array Access
+console.log(lan.at(5));
 
-//! Splice (Delete value)
-language1.splice(0, 1);
+console.log(lan[lan.length - 1]);       // Last Array Access
 
-console.log(language1);
-console.log(language1[2]);
-console.log(language1.toString()); //! To convert to a string
-console.log(language1.length); //! Arrays Number
-console.log(language1.join(' $ '));
+console.log(lan.toString());            // Convert String
 
-//! first Iteam:
-console.log(language1[0]);
-//! Last Iteam:
-console.log(language1[language1.length -1]);
+console.log(lan.join(' '));            // Join
+
+console.log(lan.length);
+
+// Multiple ADD
+lan.splice(2, 0, 'info', 'info2');
+console.log(lan);
+// Multiple Delete
+lan.splice(2, 2);
+console.log(lan);
 
 
-//! Name with Arrays:
+
+// const lang = new Array('Html', 'Css', 'Js', 'Php', true, 50);
+
+
 const person = [];
-person['First Name:'] = 'Shipon';
-person['Last Name:'] = 'Ahmed';
-person[4] = 50;
-
-console.log(person.length);
+person['firstName'] = 'Shipon';
+person['lastName'] = 'Ahmed';
 console.log(person);
+console.log(person.length);
 
 
-//! new Array:
+
 // const num = [20];
-const num = new Array (20, 25);
-
+const num = new Array(20, 25);
 console.log(num);
 
-
-//! Concat
-const x = [1, 2, 3, 4];
-const y = [1, 2, 3, 4];
-const z = [1, 2, 3, 4];
-const s = x.concat(x,y,z);
-
-console.log(s);
+const num1 = Array.of(20);    // একটি item নেওয়ার জন্য Array.of(value)
+console.log(num1);
 
 
-//! Flat
-const a = [
-    [1, 2, 3, [0, 2, 3]],
-    [1, 2, 3],
-    [1, 2, 3],
-];
+// Multiple Array Add
+const x = [1, 2, 3, 4, 5];
+const y = [1, 2, 3, 4, 5];
+const p = [2, 4, 6, 8];
+const q = [2, 4, 6, 8];
+const r = [2, 4, 6, 8];
+const z = x.concat(y, p, q, r);
+console.log(z);
 
+
+
+const a = [[1, 2, 3], [4, 5, 6], [7, 8, 9]];
+console.log(a);
 console.log(a.flat());
-
